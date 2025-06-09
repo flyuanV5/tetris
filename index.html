@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <h1>俄罗斯方块</h1>
+            <div class="score-board">
+                <div class="score">
+                    <span>得分:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="level">
+                    <span>等级:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="lines">
+                    <span>行数:</span>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+            <div class="next-piece">
+                <h3>下一个:</h3>
+                <canvas id="next-canvas" width="80" height="80"></canvas>
+            </div>
+            <div class="controls">
+                <h3>控制:</h3>
+                <p>← → 移动</p>
+                <p>↓ 加速下降</p>
+                <p>↑ 旋转</p>
+                <p>空格 暂停</p>
+            </div>
+        </div>
+        <div class="game-board">
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+            <div class="game-over" id="game-over">
+                <h2>游戏结束</h2>
+                <p>最终得分: <span id="final-score">0</span></p>
+                <button onclick="startGame()">重新开始</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
